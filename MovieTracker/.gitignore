@@ -1,0 +1,8 @@
+bin/
+obj/
+node_modules/
+*.db
+*.db-shm
+*.db-wal
+backend/MovieTracker.Api/wwwroot/*
+!backend/MovieTracker.Api/wwwroot/.gitkeep

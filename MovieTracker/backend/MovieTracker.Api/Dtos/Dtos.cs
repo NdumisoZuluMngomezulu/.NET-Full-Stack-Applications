@@ -1,17 +1,19 @@
 namespace MovieTracker.Api.Dtos;
 
-// Requests
+// ----- Requests -----
 
 public record MovieInput(
     string? Title,
     DateOnly? ReleaseDate,
     string[]? Genres,
     string? Country,
+    string? Director,
     string? PosterUrl,
     string? Synopsis);
 
-public record ViewingDto(DateOnly WatchedOn, int? Rating, string? Notes);
+public record ViewingInput(DateOnly WatchedOn, int? Rating, string? Notes);
 
+/// <summary>Query-string filters for GET /api/movies. Everything is optional.</summary>
 public class MovieQuery
 {
     public string? Search { get; set; }
@@ -33,13 +35,18 @@ public class MovieQuery
     public string? Sort { get; set; }
 }
 
+// ----- Responses -----
+
+public record ViewingDto(int Id, DateOnly WatchedOn, int? Rating, string? Notes);
+
 public record MovieDto(
     int Id,
     string Title,
     DateOnly? ReleaseDate,
     string[] Genres,
     string? Country,
-    string? Directory,
+    string? Director,
+    string? PosterUrl,
     string? Synopsis,
     DateTime AddedAt,
     bool Watched,
@@ -47,7 +54,6 @@ public record MovieDto(
     int? LatestRating,
     double? AverageRating,
     DateOnly? LastWatchedOn,
-    List<ViewingDto> Viewings
-);
+    List<ViewingDto> Viewings);
 
 public record FacetsDto(List<string> Genres, List<string> Countries);

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MovieTracker.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a62fca1ddea8b2622bbfd7339dc3c2b73cea4db4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+55528f5f1998e17dded25096f04f1fd71d0c71fd")]
 [assembly: System.Reflection.AssemblyProductAttribute("MovieTracker.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MovieTracker.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
